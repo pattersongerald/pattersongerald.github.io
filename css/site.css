@@ -7,12 +7,17 @@ h1 {
 	margin-bottom: 0pt;
 }
 
+.container {
+	position: relative;
+	z-index: 2;
+}
+
 h2 {
 	color: #391604;
 	font-family: 'Montserrat';
 	text-shadow: #F6B08D 1px 1px 0px;
 	font-weight: normal;
-	font-size: 1.5em;
+	font-size: 2em;
 	margin-top: 0pt;
 	margin-bottom: 10pt;
 }
@@ -27,7 +32,7 @@ ul {
 }
 body {
 	background-color: #F49667;
-		font-family: 'Montserrat';
+	font-family: 'Montserrat';
 
 }
 
@@ -36,10 +41,18 @@ body {
 	border-radius: 5px;
 	font-size: 2em;
 	color: #391604;
+	background-color: rgba(244,150,103,1);
 	text-shadow: #F6B08D 1px 1px 0px;
 }
 
 .btn-alex:hover {
+	color: #FCE5D9;
+	background-color: #391604;
+	text-shadow: #993A0B 1px 1px 0px;
+	transition: ease-out 0.5s;
+}
+
+.btn-alex:active {
 	color: #FCE5D9;
 	background-color: #391604;
 	text-shadow: #993A0B 1px 1px 0px;
@@ -54,4 +67,5 @@ ul.unstyled li{
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	z-index: 1;
 }
