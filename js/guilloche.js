@@ -7,10 +7,14 @@ var guilloche = function (canvas, opts) {
 	canvasElement.height = window.innerHeight;
 	canvasElement.width = window.innerWidth;
 
+	if (window.devicePixelRatio == 2) {
+		canvasElement.height = window.innerHeight * window.devicePixelRatio;
+		canvasElement.width = window.innerWidth * window.devicePixelRatio;
+	}
 	var ctx = canvas.getContext('2d'),
 		size = {
-			x: window.innerWidth,
-			y: window.innerHeight
+			x: window.innerWidth * window.devicePixelRatio,
+			y: window.innerHeight * window.devicePixelRatio
 		},
 		halfSize = {
 			x: size.x / 2,
@@ -22,16 +26,14 @@ var guilloche = function (canvas, opts) {
 		radiusEffectConstant = opts.radiusEffectConstant || 250,
 		steps = opts.steps || 250,
 		centerPoint = opts.centerPoint || {
-			x: window.innerWidth,
-			y: window.innerHeight
+			x: window.innerWidth * window.devicePixelRatio,
+			y: window.innerHeight * window.devicePixelRatio
 		},
 		color = opts.color || '#391604',
 		globalAlpha = opts.globalAlpha || 1;
 
 	ctx.globalAlpha = globalAlpha;
 	ctx.clearRect(0, 0, size.x, size.y);
-	ctx.webkitImageSmoothingEnabled = true;
-
 
 	var diff = majorR - minorR,
 		s = diff / minorR,
