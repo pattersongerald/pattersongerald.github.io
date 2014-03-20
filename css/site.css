@@ -1,20 +1,15 @@
 h1 {
 	color: #391604;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
 	text-shadow: #F6B08D 1px 1px 0px;
 	font-size: 8em;
 	margin-top: 10pt;
 	margin-bottom: 0pt;
 }
 
-.container {
-	position: relative;
-	z-index: 2;
-}
-
 h2 {
 	color: #391604;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
 	text-shadow: #F6B08D 1px 1px 0px;
 	font-weight: normal;
 	font-size: 2em;
@@ -32,8 +27,16 @@ ul {
 }
 body {
 	background-color: #F49667;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+}
 
+ul.unstyled li{
+	margin-bottom: 10px;
+}
+
+.container {
+	position: relative;
+	z-index: 2;
 }
 
 .btn-alex {
@@ -59,9 +62,6 @@ body {
 	transition: ease-out 0.5s;
 }
 
-ul.unstyled li{
-	margin-bottom: 10px;
-}
 
 #guillocheDisplay {
 	position: absolute;
